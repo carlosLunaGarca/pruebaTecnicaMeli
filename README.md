@@ -1,5 +1,6 @@
 # pruebaTecnicaMeli
 ##tecnologias
+
 * framework
   * Spring Boot Java
 * Motor de base de datos
@@ -28,5 +29,16 @@ url top 5 favoritos
 
 ## intrucciones despliegue y imagenes docker
 
+## imagen API cupón
 
+> registry.gitlab.com/carloslunajava/contenedoresmeli/cupon_service:v1
 
+## paso a paso despliegue docker
+
+>docker network create proyecto --subnet=172.22.0.0/16
+
+>docker network create --subnet=172.22.0.0/16 proyecto
+
+>docker run --name mysql-service --network proyecto --ip=172.22.0.2 -p 33006:3306 -e MYSQL_ROOT_PASSWORD=12345678 -e MYSQL_DATABASE=Favorito -d mysql:5.7
+
+>docker run -d --name cupon_meli --network proyecto --ip 172.22.0.5 -p 8040:8037 registry.gitlab.com/carloslunajava/contenedoresmeli/cupon_service:v1
