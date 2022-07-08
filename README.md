@@ -37,8 +37,6 @@ url top 5 favoritos
 
 >docker network create proyecto --subnet=172.22.0.0/16
 
->docker network create --subnet=172.22.0.0/16 proyecto
-
 >docker run --name mysql-service --network proyecto --ip=172.22.0.2 -p 33006:3306 -e MYSQL_ROOT_PASSWORD=12345678 -e MYSQL_DATABASE=Favorito -d mysql:5.7
 
 >docker run -d --name cupon_meli --network proyecto --ip 172.22.0.5 -p 8040:8037 registry.gitlab.com/carloslunajava/contenedoresmeli/cupon_service:v1
