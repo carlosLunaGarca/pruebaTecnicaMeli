@@ -2,6 +2,7 @@ package com.meli.cuponservice.Controllers;
 
 import com.meli.cuponservice.Entitys.Favoritos;
 import com.meli.cuponservice.Models.Request;
+import com.meli.cuponservice.Models.Response;
 import com.meli.cuponservice.Models.ResponseCalCupon;
 import com.meli.cuponservice.Services.IServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class Controllers {
 @Autowired
     IServices iServices;
     @PostMapping("/coupon")
-    public ResponseCalCupon CalcularCupon (@RequestBody Request request){
+    public Response<ResponseCalCupon> CalcularCupon (@RequestBody Request request){
 
     return iServices.calcularService(request);
     }
