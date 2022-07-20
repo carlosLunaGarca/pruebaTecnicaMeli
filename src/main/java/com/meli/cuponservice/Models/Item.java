@@ -82,4 +82,12 @@ public class Item implements Comparable<Item>  {
     public int hashCode() {
         return Objects.hash(body.getId());
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "code=" + code +
+                ", body=" + body.toString() +
+                '}';
+    }
 }

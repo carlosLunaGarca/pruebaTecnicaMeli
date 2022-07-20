@@ -8,6 +8,6 @@ import com.meli.cuponservice.Models.ResponseCalCupon;
 import java.util.List;
 
 public interface IServices {
-     Response<ResponseCalCupon> calcularService(Request request);
+     Response<ResponseCalCupon>    calcularService(Request request);
      List<Favoritos> getFavoritos();
 }

@@ -3,6 +3,7 @@ package com.meli.cuponservice.Models;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import javax.annotation.Generated;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -20,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class ResponseCalCupon {
 
     @JsonProperty("item_ids")
-    private List<String> itemIds = null;
+    private List<String> itemIds;
     @JsonProperty("total")
     private Integer total;
     @JsonIgnore
@@ -56,4 +57,23 @@ public class ResponseCalCupon {
         this.additionalProperties.put(name, value);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ResponseCalCupon)) return false;
+        ResponseCalCupon that = (ResponseCalCupon) o;
+        return Objects.equals(itemIds, that.itemIds) && Objects.equals(total, that.total) && Objects.equals(additionalProperties, that.additionalProperties);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(itemIds, total, additionalProperties);
+    }
+
+    @Override
+    public String toString() {
+        return "itemIds=" + itemIds +
+                ", total=" + total;
+
+    }
 }
