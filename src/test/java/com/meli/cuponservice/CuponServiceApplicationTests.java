@@ -63,6 +63,6 @@ IServices iServices;
         peticion.setItemIds(listaIds);
         Assertions.assertEquals(iServices.calcularService(peticion),response);
 
-            }
+    }
 
 }
