@@ -32,12 +32,12 @@ public class Request {
         this.itemIds = itemIds;
     }
 
-    @JsonProperty("total")
+    @JsonProperty("amount")
     public Integer getAmount() {
         return amount;
     }
 
-    @JsonProperty("total")
+    @JsonProperty("amount")
     public void setAmount(Integer amount) {
         this.amount = amount;
     }

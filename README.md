@@ -9,6 +9,7 @@
   * Docker
 
 ## URLS y instrucciones de uso de la API
+> SWAGGER DOC:http://165.232.153.114:8040/Meli/swagger-ui/index.html#/controllers/getFavoritos
 
 > Authorization: basic auth
 > 
